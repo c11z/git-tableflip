@@ -1,5 +1,5 @@
 #!/bin/bash
-set -e
+set -ex
 
 tableflip_animation () {
     echo -en "  (゜-゜)       ┬─┬﻿" "\r"
@@ -72,4 +72,3 @@ git_tableflip () {
 }
 
 alias git="git_or_flip"
-alias git-tableflip="git_tableflip"
