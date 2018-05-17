@@ -1,6 +1,5 @@
 #!/bin/bash
-#set -x
-#set -e
+set -e
 
 tableflip_animation () {
     echo -en "(゜-゜)       ┬─┬﻿" "\r"
