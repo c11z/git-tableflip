@@ -2,18 +2,26 @@
 set -e
 
 tableflip_animation () {
-    echo -en "(゜-゜)       ┬─┬﻿" "\r"
+    echo -en "  (゜-゜)       ┬─┬﻿" "\r"
+    sleep 1
+    echo -en "     (゜-゜)    ┬─┬﻿" "\r"
     sleep 0.5
-    echo -en "   (゜-゜)    ┬─┬﻿" "\r"
-    sleep 0.5
-    echo -en "      (゜-゜) ┬─┬﻿" "\r"
+    echo -en "        (゜-゜) ┬─┬﻿" "\r"
     sleep 1
-    echo -en "     (\゜-゜)\┬─┬﻿" "\r"
+    echo -en "       (\゜-゜)\┬─┬﻿" "\r"
     sleep 1
-    echo "      ( ╯°□° )╯ ┻━┻"
-    sleep 1
+    echo "        ( ╯°□° )╯ ┻━┻"
+    sleep 1.5
 }
 
+haiku_animation () {
+    echo "Sadness was your git."
+    sleep 1
+    echo "Tableflip is the answer."
+    sleep 1
+    echo "You are git master."
+    sleep 1
+}
 
 git_or_flip () {
     if [ "$1" == "tableflip" ]
@@ -59,10 +67,8 @@ git_tableflip () {
     # after success remove clean clone from temp
     rm -rf ${TABLE_FLIP_DIR}/${BASE}
 
-    # echo happy strong emoji
-    echo "Sadness was your git." \
-        "Tableflip is the answer." \
-        "You are git master."
+    # words of wisdom
+    haiku_animation
 }
 
 alias git="git_or_flip"
