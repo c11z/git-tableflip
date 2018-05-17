@@ -28,7 +28,7 @@ git_or_flip () {
     then
         git_tableflip
     else
-        git "$@"
+        $(which git) "$@"
     fi
 }
 
