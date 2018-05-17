@@ -46,22 +46,22 @@ git_tableflip () {
         exit 1
     fi
 
-    # make workplace
+    # make a workplace for doing our stuff
     mkdir -p ${TABLE_FLIP_DIR}
 
-    # backup
+    # create a backup of the user's code (just in case)
     cp -R "$PWD" "${TABLE_FLIP_DIR}/${BASE}_${TIMESTAMP}_backup"
 
-    # clone a clean version of .git files
+    # clone a clean version of the user's repo (to get its .git files)
     git clone -q "$REMOTE" "${TABLE_FLIP_DIR}/${BASE}"
 
-    # remove local dot gitness
+    # remove local messed up dot gitness
     rm -rf "${PWD}/.git"
 
     # dance of the tableflip
     tableflip_animation
 
-    #replace dot gitness with clean representation
+    # replace messed up dot gitness with clean representation
     cp -R ${TABLE_FLIP_DIR}/${BASE}/.git ${PWD}/
 
     # after success remove clean clone from temp
