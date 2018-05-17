@@ -16,17 +16,17 @@ tableflip_animation () {
 }
 
 
-git-or-flip () {
+git_or_flip () {
     if [ "$1" == "tableflip" ]
     then
-        git-tableflip
+        git_tableflip
     else
         git "$@"
     fi
 }
 
 
-git-tableflip () {
+git_tableflip () {
     TABLE_FLIP_DIR="/tmp/git-table-flip"
     BASE=$(basename $PWD)
     REMOTE=$(git config --get remote.origin.url)
@@ -63,5 +63,5 @@ git-tableflip () {
     # echo happy strong emoji
 }
 
-alias git="git-or-flip"
+alias git="git_or_flip"
 
