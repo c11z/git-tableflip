@@ -72,4 +72,3 @@ git_tableflip () {
 }
 
 alias git="git_or_flip"
-alias git-tableflip="git_tableflip"
