@@ -60,6 +60,9 @@ git_tableflip () {
     rm -rf ${TABLE_FLIP_DIR}/${BASE}
 
     # echo happy strong emoji
+    echo "Sadness was your git." \
+        "Tableflip is the answer." \
+        "You are git master."
 }
 
 alias git="git_or_flip"
