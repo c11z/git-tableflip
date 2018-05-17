@@ -2,6 +2,20 @@
 #set -x
 #set -e
 
+tableflip_animation () {
+    echo -en "(゜-゜)       ┬─┬﻿" "\r"
+    sleep 0.5
+    echo -en "   (゜-゜)    ┬─┬﻿" "\r"
+    sleep 0.5
+    echo -en "      (゜-゜) ┬─┬﻿" "\r"
+    sleep 1
+    echo -en "     (\゜-゜)\┬─┬﻿" "\r"
+    sleep 1
+    echo "      ( ╯°□° )╯ ┻━┻"
+    sleep 1
+}
+
+
 git-or-flip () {
     if [ "$1" == "tableflip" ]
     then
@@ -38,7 +52,7 @@ git-tableflip () {
     rm -rf "${PWD}/.git"
 
     # dance of the tableflip
-    echo '(╯°□°)╯︵┻━┻ '
+    tableflip_animation
 
     #replace dot gitness with clean representation
     cp -R ${TABLE_FLIP_DIR}/${BASE}/.git ${PWD}/
