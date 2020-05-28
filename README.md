@@ -1,6 +1,8 @@
 # git-tableflip
 Bash script to realize https://xkcd.com/1597/
 
+Presentation here https://www.youtube.com/watch?v=nUgjdlHJ3UE
+
 <img src="https://imgs.xkcd.com/comics/git_2x.png" alt="" data-canonical-src="https://imgs.xkcd.com/comics/git_2x.png" width="350" />
 
 ## Usage
